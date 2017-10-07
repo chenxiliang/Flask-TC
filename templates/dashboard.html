@@ -1,6 +1,24 @@
 {% extends "header.html" %}
 
 {% block body %}
+
+<style>
+
+    .container-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-TD {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+
+
+</style>
 <div style="margin-top: 100px;" class="container">
 
     <ul class="nav nav-tabs">
@@ -58,13 +76,56 @@
                     </tbody>
                 </table>
                 <button type="button" class="btn btn-primary btn-lg btn-block">Add to Project</button>
-
             </div>
-
         </div>
+
+
+        <!-- Begin Transform Data tab -->
         <div id="TransformData" class="tab-pane fade">
-            <h3>Transform Data</h3>
-            <p>Some content in menu 2.</p>
+            <div style="width: 60%; margin: auto">
+                <h3 class="text-center">Instructions</h3>
+                <div >
+                    <p class="text-justify">
+                        Set parameters for the data transformation here.<br>
+                        Press "Transform Data" to start the data transformation.
+                    </p>
+                </div>
+            </div>
+            <hr style="border-color: silver">
+            <div style="margin-top: 45px; width: 80%;" class="container-flex container-TD">
+                <div style="border-right: 1px solid silver; padding-right: 50px;">
+
+                    <h3>Columns to include</h3>
+
+                </div>
+                <div style="text-align: left;">
+                    <div class="container-TD">
+                        <div><h4 style="padding-right: 0px;">Method:</h4></div>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Select Method <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container-TD">
+                        <div><h4>Chunk Size:</h4></div>
+                        <div>
+                            <input style="width: 30%; margin: 0 auto;" class="w3-check" type="text">
+                        </div>
+                    </div>
+                    <div class="container-TD">
+                        <div><h4>FFT Size:</h4></div>
+                        <div>
+                            <input style="width: 30%; margin: 0 auto;" class="w3-check" type="text">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Transform Data</button>
+                </div>
+            </div>
         </div>
         <div id="FFTPreview" class="tab-pane fade">
             <h3>FFT Preview</h3>
