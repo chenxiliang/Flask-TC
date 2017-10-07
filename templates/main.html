@@ -4,70 +4,84 @@
   <meta charset="UTF-8">
   <title>TimeChange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/static/styles.css?q=1280549780"
-   type="text/css" media="screen" charset="utf-8" />
+        type="text/css" media="screen" charset="utf-8" />
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
 
 </head>
 <body>
-
-<nav class="navbar navbar-inverse navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">TimeCh<font color="#3F9AF7">ai</font>nge</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <form class="navbar-form navbar-right">
-        <button type="button" class="btn btn-default" aria-label="Left Align">
-          <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
-      </form>
-    </div><!--/.navbar-collapse -->
-  </div>
-</nav>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
 
-
-<div style="margin-top: 100px;" class="container">
-  <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="#">Load Files</a></li>
-    <li role="presentation"><a href="#">Transform Data</a></li>
-    <li role="presentation"><a href="#">FFT Preview</a></li>
-    <li role="presentation"><a href="#">Configure</a></li>
-    <li role="presentation"><a href="#">Results</a></li>
-  </ul>
-  <div>
-    <h3 class="text-center">Welcome to TimeChange</h3>
-    <p class="text-center">This project allows users to easily convert timeseries csv formatted<br>
-      data into fourier transform images and classify them using existing<br>
-      machine learning libraries without a deep knowledge of those tools.<br><br>
-      Begin starting with the next tab to load and label your csv files.
-    </p>
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="container">
-    <span class="text-muted">2017 MTSU Timechange</span>
-  </div>
-</footer>
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
 </body>
 
 
+
+
+</html>
+
+
+<!--<footer class="footer">-->
+<!--<div class="container">-->
+<!--<span class="text-muted">2017 MTSU Timechange</span>-->
+<!--</div>-->
+<!--</footer>-->
 
 
 

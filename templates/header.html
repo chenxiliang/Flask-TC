@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- remove rounded edges -->
+    <style>
+        .nav-tabs > li > a {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<div class="border-row" style="width:100%; margin-bottom:15px;"></div>
+
+<div class="container-fluid" align="center" style="min-height:100%">
+
+    {% block body %}
+
+    {% endblock %}
+
+</div>
+
 </body>
+
 </html>
