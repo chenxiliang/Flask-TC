@@ -17,6 +17,9 @@
 
     }
 
+    * {
+        border-radius: 0 !important;
+    }
 
 </style>
 <div style="margin-top: 100px;" class="container">
@@ -43,15 +46,15 @@
         </div>
         <div id="loadFiles" class="tab-pane fade">
             <h3 class="text-center">Instructions</h3>
-            <div style="width: 75%; margin: auto">
-                <p style="text-align: left">
+            <div style="width: 75%; margin: auto; text-align: left;">
+                <p>
                     Step 1) Click the "Select Files" button to select files from the filesystem<br>
                     Step 2) Type a label into the following text box<br>
                     Step 3) Click the files you want to apply this label to<br>
                     Step 4) Repeat steps 2 and 3 until all files are labeled<br>
                     Step 5) Click "Add to Project" button to add these labeled files to the project<br>
                 </p>
-                <button type="button" class="btn btn-primary btn-lg btn-block">Select Files</button>
+                <button type="button" class="btn btn-primary">Select Files</button>
 
                 <table class="table table-striped">
                     <thead>
@@ -75,7 +78,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-primary btn-lg btn-block">Add to Project</button>
+                <button type="button" class="btn btn-primary">Add to Project</button>
             </div>
         </div>
 
@@ -123,7 +126,7 @@
                             <input style="width: 30%; margin: 0 auto;" class="w3-check" type="text">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Transform Data</button>
+                    <button type="button" class="btn btn-primary btn-block">Transform Data</button>
                 </div>
             </div>
         </div>
@@ -132,12 +135,50 @@
             <p>Some content.</p>
         </div>
         <div id="Configure" class="tab-pane fade">
-            <h3>Configure</h3>
-            <p>Some content in menu 1.</p>
+            <h3>Configure Classifier</h3>
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body" style="text-align: left;">
+                    <samp class="text-left">
+                        #The [DEFAULT]<br>
+                        #The type of neural net to generate<br>
+                        #Settings for the chosen type will be stored under a<br>
+                        #section of the same name<br>
+                        model_type = convolutional_basic<br>
+                        [DEFAULT]<br>
+                        #The [DEFAULT]<br>
+                        #The type of neural net to generate<br>
+                        #Settings for the chosen type will be stored under a<br>
+                        #section of the same name<br>
+                        model_type = convolutional_basic<br>
+<br>
+                        [convolutional_basic]<br>
+                        #The number of convolutional blocks to use for the model<br>
+                        num_blocks = 4<br>
+                        The number of filters for these blocks (comma-separated list)<br>
+                        #If the size of this list is less than num_blocks, the last value<br>
+                        #will be used for the remaining values<br><br>
+
+                        num_filters = 16,8,8<br>
+                    </samp>
+                </div>
+            </div>
+             <button type="button" class="btn btn-primary btn-block">Save</button>
+
+
+
+
         </div>
         <div id="Results" class="tab-pane fade">
             <h3>Results</h3>
-            <p>Some content in menu 2.</p>
+            <button type="button" style="width: 15%" class="btn btn-primary ">Train</button>
+
+
         </div>
     </div>
 </div>
