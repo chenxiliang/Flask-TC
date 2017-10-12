@@ -1,0 +1,70 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<style>
+
+    .container-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-TD {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+
+    * {
+        border-radius: 0 !important;
+    }
+
+</style>
+<div style="margin-top: 100px;" class="container">
+    <ul class="nav nav-tabs">
+        <li><a href="{{url_for('dashboard')}}">Home</a></li>
+        <li class="active"><a href="{{url_for('loadFiles')}}">Load Files</a></li>
+        <li><a href="{{url_for('TransformData')}}">Transform Data</a></li>
+        <li><a href="{{url_for('FFT_Preview')}}">FFT Preview</a></li>
+        <li><a href="{{url_for('Configure')}}">Configure</a></li>
+        <li><a href="{{url_for('Result')}}">Results</a></li>
+    </ul>
+                <h3 class="text-center">Instructions</h3>
+            <div style="width: 75%; margin: auto; text-align: left;">
+                <p>
+                    Step 1) Click the "Select Files" button to select files from the filesystem<br>
+                    Step 2) Type a label into the following text box<br>
+                    Step 3) Click the files you want to apply this label to<br>
+                    Step 4) Repeat steps 2 and 3 until all files are labeled<br>
+                    Step 5) Click "Add to Project" button to add these labeled files to the project<br>
+                </p>
+                <button type="button" class="btn btn-primary">Select Files</button>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>File</th>
+                        <th>Label</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>file name</td>
+                        <td><input class="w3-check" placeholder="Insert label" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>file name</td>
+                        <td><input class="w3-check" placeholder="Insert label" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>file name</td>
+                        <td><input class="w3-check" placeholder="Insert label" type="text"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary">Add to Project</button>
+            </div>
+</div>
+{% endblock %}

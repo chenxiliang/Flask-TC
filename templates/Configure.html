@@ -1,0 +1,69 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<style>
+
+    .container-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-TD {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+    }
+
+    * {
+        border-radius: 0 !important;
+    }
+
+</style>
+<div style="margin-top: 100px;" class="container">
+    <ul class="nav nav-tabs">
+        <li><a href="{{url_for('dashboard')}}">Home</a></li>
+        <li><a href="{{url_for('loadFiles')}}">Load Files</a></li>
+        <li><a href="{{url_for('TransformData')}}">Transform Data</a></li>
+        <li><a href="{{url_for('FFT_Preview')}}">FFT Preview</a></li>
+        <li class="active"><a href="{{url_for('Configure')}}">Configure</a></li>
+        <li><a href="{{url_for('Result')}}">Results</a></li>
+    </ul>
+<h3>Configure Classifier</h3>
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body" style="text-align: left;">
+                    <samp class="text-left">
+                        #The [DEFAULT]<br>
+                        #The type of neural net to generate<br>
+                        #Settings for the chosen type will be stored under a<br>
+                        #section of the same name<br>
+                        model_type = convolutional_basic<br>
+                        [DEFAULT]<br>
+                        #The [DEFAULT]<br>
+                        #The type of neural net to generate<br>
+                        #Settings for the chosen type will be stored under a<br>
+                        #section of the same name<br>
+                        model_type = convolutional_basic<br>
+<br>
+                        [convolutional_basic]<br>
+                        #The number of convolutional blocks to use for the model<br>
+                        num_blocks = 4<br>
+                        The number of filters for these blocks (comma-separated list)<br>
+                        #If the size of this list is less than num_blocks, the last value<br>
+                        #will be used for the remaining values<br><br>
+
+                        num_filters = 16,8,8<br>
+                    </samp>
+                </div>
+            </div>
+             <button type="button" class="btn btn-primary btn-block">Save</button>
+</div>
+{% endblock %}
